@@ -46,7 +46,7 @@ export default function Dashboard() {
     }, [open]);
 
     return (
-        <div className="relative min-h-dvh w-full bg-purple-900 text-white">
+        <div className="relative min-h-dvh w-full bg-black text-white">
             <Background activeTab={activeTab} />
 
             <div className="pointer-events-none fixed inset-0 z-1 bg-[radial-gradient(circle_at_30%_25%,rgba(0,0,0,0.10),rgba(0,0,0,0.65)_50%,rgba(0,0,0,0.95))]" />
