@@ -95,7 +95,7 @@ export default function AboutMe() {
             </h2>
             <div className="space-y-4">
               <button
-                onClick={() => handleDownload("resume.pdf", "Sidath Rathnayake - CV.pdf")}
+                onClick={() => handleDownload("Sidath Rathnayake - CV.pdf", "Sidath Rathnayake - CV.pdf")}
                 className="w-full flex items-center justify-between gap-3 p-4 bg-white/5 rounded border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-white/5 group/btn hover:-translate-y-1"
               >
                 <div className="flex items-center gap-3">
