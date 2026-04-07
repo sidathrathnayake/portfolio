@@ -95,7 +95,7 @@ export default function AboutMe() {
             </h2>
             <div className="space-y-4">
               <button
-                onClick={() => handleDownload("Sidath_Rathnayake_CV.pdf", "Sidath Rathnayake - CV.pdf")}
+                onClick={() => handleDownload("resume.pdf", "Sidath Rathnayake - CV.pdf")}
                 className="w-full flex items-center justify-between gap-3 p-4 bg-white/5 rounded border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-white/5 group/btn hover:-translate-y-1"
               >
                 <div className="flex items-center gap-3">
@@ -104,7 +104,7 @@ export default function AboutMe() {
                 </div>
                 <span className="text-xs text-gray-400 group-hover/btn:text-gray-300 transition-colors">PDF</span>
               </button>
-              <button
+              {/* <button
                 onClick={() => handleDownload("Sidath_Rathnayake_Cover_Letter.pdf", "Sidath Rathnayake - Cover letter.pdf")}
                 className="w-full flex items-center justify-between gap-3 p-4 bg-white/5 rounded border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-white/5 group/btn hover:-translate-y-1"
               >
@@ -113,7 +113,7 @@ export default function AboutMe() {
                   <span className="text-gray-300 group-hover/btn:text-gray-100 transition-colors font-medium">Cover Letter</span>
                 </div>
                 <span className="text-xs text-gray-400 group-hover/btn:text-gray-300 transition-colors">PDF</span>
-              </button>
+              </button> */}
               <div className="pt-4 border-t border-white/10">
                 <h2 className="text-xl sm:text-2xl font-bold text-gray-200 mb-6 uppercase tracking-widest drop-shadow-lg">
                   Contact
