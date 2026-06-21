@@ -8,7 +8,7 @@ const MARQUEE_ITEMS = [...TECH_STACK, ...TECH_STACK];
 
 export default function TechMarquee() {
   return (
-    <div className="relative overflow-hidden border-y border-white/10 bg-white/[0.02] py-6">
+    <div className="relative overflow-hidden border-y border-white/10 bg-white/[0.02] py-6 my-6">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#07060c] to-transparent sm:w-40" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#07060c] to-transparent sm:w-40" />
 

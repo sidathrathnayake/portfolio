@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { ArrowRight, Briefcase, Building2, Cpu, Mail } from "lucide-react";
 import { TECH_STACK, YEARS_OF_EXPERIENCE } from "@/constants/constants";
 import type { ExperienceItem } from "@/types/content";
+import DotPattern from "./DotPattern";
 import StatCounter from "./StatCounter";
 
 export default function Hero() {
@@ -39,6 +40,7 @@ export default function Hero() {
     >
       <div className="pointer-events-none absolute right-[-10%] top-[-10%] h-[36rem] w-[36rem] rounded-full bg-gradient-to-br from-orange-500/30 via-pink-500/20 to-transparent blur-3xl" />
       <div className="pointer-events-none absolute left-[-10%] bottom-[-15%] h-[26rem] w-[26rem] rounded-full bg-purple-600/15 blur-3xl" />
+      <DotPattern className="right-0 top-0 bottom-1/2 h-auto w-1/3" />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <motion.div
@@ -107,19 +109,18 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-          className="relative mx-auto w-full max-w-sm lg:max-w-md"
+          className="relative mx-auto w-full max-w-lg lg:max-w-xl"
         >
-          <div className="relative rounded-[2rem] border border-white/15 bg-gradient-to-b from-white/10 to-transparent p-3 shadow-2xl shadow-black/40 backdrop-blur-xl">
-            <div className="overflow-hidden rounded-[1.6rem] bg-[#0b0a12]">
-              <Image
-                src="/assets/badge.png"
-                alt="Sidath Rathnayake"
-                width={512}
-                height={512}
-                className="h-full w-full object-contain"
-                priority
-              />
-            </div>
+          <div className="relative">
+            <Image
+              src="/assets/heroImage.png"
+              alt="Sidath Rathnayake"
+              width={900}
+              height={900}
+              priority
+              sizes="(max-width: 640px) 95vw, (max-width: 1024px) 50vw, 650px"
+              className="h-auto w-full object-contain [mask-image:radial-gradient(circle_at_center,black_45%,transparent_70%)]"
+            />
           </div>
 
           <motion.div
