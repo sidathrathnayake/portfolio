@@ -1,31 +1,10 @@
-export const APP_TITLES = {
-  PORTFOLIO: "SIDATH RATHNAYAKE",
-};
+import { getYearsOfExperience } from "@/helpers/date.helpers";
 
-export const ITEM_HEIGHT = 38;
-export const ITEM_WIDTH = 234;
+export const EXPERIENCE_START_DATE = "2021-12-27";
 
-export const SEO = {
-  SITE_TITLE: "Sidath Rathnayake | Full-Stack Software Engineer Portfolio",
-  SITE_DESCRIPTION:
-    "Full-stack software engineer with 3+ years experience building high-performance web and mobile applications. Expert in React, Next.js, Node.js, Flutter, AWS, and modern web technologies.",
-};
-
-export const TAB_MENU = [
-  { id: 0, tab: "aboutMe", label: "ABOUT ME" },
-  { id: 1, tab: "technicalSkills", label: "TECHNICAL SKILLS" },
-  { id: 2, tab: "personalSkills", label: "PERSONAL SKILLS" },
-  { id: 3, tab: "projects", label: "PROJECTS" },
-  { id: 4, tab: "experience", label: "EXPERIENCE" },
-  { id: 5, tab: "education", label: "EDUCATION" },
-  { id: 6, tab: "extraActivities", label: "EXTRA ACTIVITIES" },
-];
+export const YEARS_OF_EXPERIENCE = getYearsOfExperience(EXPERIENCE_START_DATE);
 
 export const ABOUT_ME = {
-  DESCRIPTION:
-    "I'm a software engineer from Sri Lanka who builds scalable web, mobile, and backend applications with a focus on clean architecture, performance, and real-world usability. I enjoy turning complex ideas into simple, maintainable solutions, and I'm constantly refining my skills through modern technologies and hands-on problem solving. My goal is to create digital products that are not only technically strong, but also genuinely useful to the people who rely on them.",
-  PERSONAL_DETAILS: "PERSONAL DETAILS",
-  CONTACT_DETAILS: "CONTACT DETAILS",
   FULL_NAME: "Sirimal Wattage Rathnayake Sidath Iroshana Rathnayake",
   BIRTH_DATE: "May 5, 1996",
   GENDER: "Male",
@@ -33,6 +12,7 @@ export const ABOUT_ME = {
   NATIONALITY: "Sinhala",
   LANGUAGES: "English, Sinhala",
   ADDRESS: "F'67, Weligalle Road, Siyambalapitiya, Mawanella, Sri Lanka",
+  LOCATION: "Mawanella, Sri Lanka",
   PHONE: "+94 76 056 6336",
   EMAIL: "sidathirathnayake@gmail.com",
   LINKEDIN_URL: "https://www.linkedin.com/in/sidath-rathnayake-757a68216",
@@ -61,163 +41,54 @@ export const TECHNICAL_SKILLS = {
   TOOLS: ["Git", "GitHub", "Bitbucket", "JIRA", "Azure", "VS Code"],
 };
 
-export const PERSONAL_SKILLS = [
-  "Leadership",
-  "Productive Problem Solving",
-  "Innovative Thinking",
-  "Fast Learner",
-  "Self-Learning",
-  "Team Work",
-  "Time Management",
-  "Adaptability",
-  "Positive Attitude",
-  "Patience",
-  "Reliable",
-  "Supportive",
-  "Attention to Detail",
-  "Efficient",
-  "Multitasking",
+export const BRAND_NAME = "Sidath Rathnayake";
+
+export const NAV_LINKS = [
+  { key: "home", href: "#home" },
+  { key: "about", href: "#about" },
+  { key: "skills", href: "#skills" },
+  { key: "experience", href: "#experience" },
+  { key: "projects", href: "#projects" },
+  { key: "education", href: "#education" },
+  { key: "activities", href: "#activities" },
+  { key: "contact", href: "#contact" },
 ];
 
-export const PROJECTS_DATA = [
-  {
-    title: "Hotel Management System",
-    description:
-      "Full-stack web application for SEWWANDI Hotel enabling online room booking, event planning, and management features for employee salaries, inventory, and customer payments.",
-    technologies: ["Java", "HTML", "JavaScript", "CSS", "MySQL"],
-    category: "Full-Stack",
-  },
-  {
-    title: "Online Kids Learning Mobile Application",
-    description:
-      "Android-based educational mobile app for school children with e-learning platform and online book/newspaper purchasing capabilities.",
-    technologies: ["Java", "SQLite", "Firebase"],
-    category: "Mobile",
-  },
-  {
-    title: "Online Shopping Web Application",
-    description:
-      "Feature-rich e-commerce web application with RESTful services, payment processing, and order delivery management.",
-    technologies: ["ReactJS", "HTML", "CSS", "Spring Boot"],
-    category: "Web",
-  },
-  {
-    title: "Conference Management System",
-    description:
-      "Comprehensive full-stack web application for managing online conferences with authorization, registration, payments, and attendee management.",
-    technologies: ["ReactJS", "NodeJS", "Express", "MongoDB"],
-    category: "Full-Stack",
-  },
-  {
-    title: "People's Wave Mobile Application",
-    description:
-      "Redesigned mobile application with enhanced user interfaces and engaging user experience.",
-    technologies: ["React Native", "NodeJS", "Express", "MongoDB"],
-    category: "Mobile",
-  },
-  {
-    title: "Fuel Station Mobile Application",
-    description:
-      "Mobile application for managing fuel station operations and customer queue details.",
-    technologies: ["Java", "SQLite", "C#", "MongoDB"],
-    category: "Mobile",
-  },
-  {
-    title: "Mobile Zone Web Application",
-    description:
-      "Full-stack web application for selling mobile phones and accessories with seamless shopping experience.",
-    technologies: ["ReactJS", "NodeJS", "Express", "MongoDB"],
-    category: "Web",
-  },
-  {
-    title: "ProcMan Web & Mobile Application",
-    description:
-      "Comprehensive procurement management system for construction sites with web and mobile interfaces.",
-    technologies: ["ReactJS", "Flutter", "NodeJS", "Express", "MongoDB"],
-    category: "Full-Stack",
-  },
-  {
-    title: "Resume Ranker",
-    description:
-      "4th-year research project focusing on ranking resumes based on technical skills using AI/ML techniques.",
-    technologies: ["ReactJS", "NodeJS", "Express", "Python", "MongoDB"],
-    category: "Full-Stack",
-  },
+export const SOCIAL_LINKS = [
+  { label: "LinkedIn", icon: "linkedin", href: ABOUT_ME.LINKEDIN_URL },
+  { label: "GitHub", icon: "github", href: ABOUT_ME.GITHUB_URL },
 ];
 
-export const EXPERIENCE_DATA = [
-  {
-    company: "CreatIT Solutions",
-    position: "Senior Software Engineer",
-    duration: "June 2024 - Present",
-    location: "Malabe, Sri Lanka",
-    description:
-      "Developing and enhancing solutions for Orivet using ReactJS, NextJS, and React Native. Working with Redux, Zustand, AWS Lambda, and modern development practices.",
-    responsibilities: [
-      "Building modern, high-performing web applications with React and Next.js",
-      "Creating seamless mobile experiences with React Native",
-      "Managing application state with Redux and Zustand",
-      "Implementing serverless functions with AWS Lambda",
-      "Version control with Bitbucket and project management with JIRA",
-    ],
-  },
-  {
-    company: "hSenid Software Lanka",
-    position: "Software Engineer",
-    duration: "May 2023 - May 2024",
-    location: "Kandy, Sri Lanka",
-    description:
-      "Developed healthcare applications across multiple platforms including native mobile apps for Android/iOS, Flutter apps, and backend services.",
-    responsibilities: [
-      "Developed native mobile healthcare applications for Android (Java) and iOS (Objective-C, Swift)",
-      "Built healthcare mobile application using Flutter and Dart",
-      "Led backend development of health data collection and analysis systems",
-      "Developed data document conversion web application with Docker deployment",
-      "Implemented GitHub Actions for workflow automation",
-    ],
-  },
-  {
-    company: "Virtusa Pvt. Ltd",
-    position: "JuniorSoftware Engineer",
-    duration: "June 2021 - April 2023",
-    location: "Colombo, Sri Lanka",
-    description:
-      "Transitioned from 6-month internship to Junior Software Engineer, developing the Virtusa CheckIn mobile application with focus on quality and team collaboration.",
-    responsibilities: [
-      "Developed mobile applications using Flutter framework",
-      "Managed projects using Azure project management tools",
-      "Version control with GitHub in team environment",
-      "Worked in Agile methodology with iterative development",
-      "Gained expertise in microservice architecture patterns",
-    ],
-  },
-];
+type TechIconMeta = { iconKey: string; color: string; fg: string };
 
-export const EDUCATION_DATA = [
-  {
-    institution: "Sri Lanka Institute of Information Technology",
-    degree: "BSc (Hons) in Information Technology",
-    specialization: "Specializing in Software Engineering",
-    duration: "2019 - 2023",
-    location: "Kandy, Sri Lanka",
-    gpa: "Distinction",
-  },
-  {
-    institution: "Kingswood College Kandy",
-    qualification: "G.C.E. Advanced Level",
-    stream: "Bio Stream",
-    duration: "2007 - 2015",
-    location: "Kandy, Sri Lanka",
-  },
-];
+export const TECH_ICON_META: Record<string, TechIconMeta> = {
+  React: { iconKey: "react", color: "#0b1120", fg: "#61DAFB" },
+  "Next.js": { iconKey: "nextjs", color: "#000000", fg: "#FFFFFF" },
+  "React Native": { iconKey: "reactNative", color: "#0b1120", fg: "#61DAFB" },
+  Flutter: { iconKey: "flutter", color: "#0b1120", fg: "#54C5F8" },
+  TypeScript: { iconKey: "typescript", color: "#3178C6", fg: "#FFFFFF" },
+  "Tailwind CSS": { iconKey: "tailwind", color: "#0b1120", fg: "#38BDF8" },
+  "Node.js": { iconKey: "nodejs", color: "#0b1120", fg: "#5FA04E" },
+  "Express.js": { iconKey: "express", color: "#0b1120", fg: "#FFFFFF" },
+  Java: { iconKey: "java", color: "#0b1120", fg: "#E76F00" },
+  "Spring Boot": { iconKey: "spring", color: "#0b1120", fg: "#6DB33F" },
+  GraphQL: { iconKey: "graphql", color: "#0b1120", fg: "#E535AB" },
+  "RESTful APIs": { iconKey: "restApi", color: "#0b1120", fg: "#9CA3AF" },
+  MongoDB: { iconKey: "mongodb", color: "#0b1120", fg: "#47A248" },
+  MySQL: { iconKey: "mysql", color: "#0b1120", fg: "#4479A1" },
+  Firebase: { iconKey: "firebase", color: "#0b1120", fg: "#FFCA28" },
+  AWS: { iconKey: "aws", color: "#0b1120", fg: "#FF9900" },
+  Docker: { iconKey: "docker", color: "#0b1120", fg: "#2496ED" },
+  "GitHub Actions": { iconKey: "githubActions", color: "#0b1120", fg: "#2088FF" },
+  DeployGate: { iconKey: "deploygate", color: "#0b1120", fg: "#14B8A6" },
+  Git: { iconKey: "git", color: "#0b1120", fg: "#F05032" },
+  GitHub: { iconKey: "github", color: "#0b1120", fg: "#FFFFFF" },
+  Bitbucket: { iconKey: "bitbucket", color: "#0b1120", fg: "#2684FF" },
+  JIRA: { iconKey: "jira", color: "#0b1120", fg: "#0052CC" },
+  Azure: { iconKey: "azure", color: "#0b1120", fg: "#0078D4" },
+  "VS Code": { iconKey: "vscode", color: "#0b1120", fg: "#007ACC" },
+};
 
-export const EXTRA_ACTIVITIES_DATA = [
-  "Exploring new destinations and experiencing different cultures through traveling",
-  "Diving into a wide range of books to expand knowledge and imagination",
-  "Enjoying competitive and team spirit through playing cricket",
-  "Engaging in immersive and strategic video gaming experiences",
-  "Practicing patience and creativity through gardening",
-  "Building strength, discipline, and focus through boxing",
-  "Relaxing and gaining inspiration by watching movies",
-  "Unwinding and staying inspired by listening to music",
-];
+export const TECH_STACK = Object.values(TECHNICAL_SKILLS)
+  .flat()
+  .map((name) => ({ name, ...TECH_ICON_META[name] }));

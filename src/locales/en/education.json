@@ -1,0 +1,21 @@
+{
+  "eyebrow": "Education",
+  "heading": "Academic Background",
+  "items": [
+    {
+      "institution": "Sri Lanka Institute of Information Technology",
+      "degree": "BSc (Hons) in Information Technology",
+      "specialization": "Specializing in Software Engineering",
+      "duration": "2019 - 2023",
+      "location": "Kandy, Sri Lanka",
+      "gpa": "Distinction"
+    },
+    {
+      "institution": "Kingswood College Kandy",
+      "qualification": "G.C.E. Advanced Level",
+      "stream": "Bio Stream",
+      "duration": "2007 - 2015",
+      "location": "Kandy, Sri Lanka"
+    }
+  ]
+}

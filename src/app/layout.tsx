@@ -1,72 +1,127 @@
-import type { Metadata, Viewport } from 'next'
-import { Oswald } from 'next/font/google'
-import './globals.css'
-import { SEO } from '@/constants/constants'
-import { personSchema, organizationSchema } from '@/lib/schema'
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+import "./globals.css";
+import { YEARS_OF_EXPERIENCE } from "@/constants/constants";
+import { buildOrganizationSchema, buildPersonSchema } from "@/lib/schema";
+import type { ExperienceItem } from "@/types/content";
 
-const oswald = Oswald({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
 });
 
-export const metadata: Metadata = {
-  title: SEO.SITE_TITLE,
-  description: SEO.SITE_DESCRIPTION,
-  keywords: [
-    "Software Engineer",
-    "Full-Stack Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Node.js",
-    "Web Development",
-    "Mobile Development",
-    "Portfolio",
-    "Sri Lanka",
-    "Sidath Rathnayake"
-  ],
-  authors: [{ name: "Sidath Rathnayake" }],
-  creator: "Sidath Rathnayake",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://sidath-portfolio.vercel.app",
-    siteName: "Sidath Rathnayake - Portfolio",
-    title: SEO.SITE_TITLE,
-    description: SEO.SITE_DESCRIPTION,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: SEO.SITE_TITLE,
-    description: SEO.SITE_DESCRIPTION,
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+const SITE_URL = "https://sidath-portfolio.vercel.app";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata");
+  const siteTitle = t("siteTitle");
+  const siteDescription = t("siteDescription", { years: YEARS_OF_EXPERIENCE });
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: siteTitle,
+    description: siteDescription,
+    keywords: [
+      "Software Engineer",
+      "Full-Stack Developer",
+      "React Developer",
+      "Next.js Developer",
+      "Node.js",
+      "Web Development",
+      "Mobile Development",
+      "Portfolio",
+      "Sri Lanka",
+      "Sidath Rathnayake",
+    ],
+    authors: [{ name: "Sidath Rathnayake", url: SITE_URL }],
+    creator: "Sidath Rathnayake",
+    alternates: {
+      canonical: "/",
+    },
+    icons: {
+      icon: "/favicon.ico",
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: SITE_URL,
+      siteName: "Sidath Rathnayake - Portfolio",
+      title: siteTitle,
+      description: siteDescription,
+      images: [
+        {
+          url: "/assets/badge.png",
+          width: 1024,
+          height: 1024,
+          alt: "Sidath Rathnayake",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: siteTitle,
+      description: siteDescription,
+      images: ["/assets/badge.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
+}
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: '#0a0e0f',
+  themeColor: "#07060c",
+  colorScheme: "dark",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const messages = await getMessages();
+  const tExperience = await getTranslations("experience");
+  const tMetadata = await getTranslations("metadata");
+  const experienceItems = tExperience.raw("items") as ExperienceItem[];
+
+  const personSchema = buildPersonSchema(
+    experienceItems,
+    tMetadata("personDescription", { years: YEARS_OF_EXPERIENCE })
+  );
+  const organizationSchema = buildOrganizationSchema(
+    tMetadata("organizationDescription")
+  );
+
   return (
     <html lang="en" className="h-full">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
-        <meta name="theme-color" content="#0a0e0f" />
-        <meta name="color-scheme" content="dark" />
-        <link rel="canonical" href="https://sidath-portfolio.vercel.app" />
-        <link rel="icon" href="/favicon.ico" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
-      <body className={`${oswald.className} min-h-dvh bg-black text-white antialiased`}>
-        {children}
+      <body className={`${inter.className} min-h-dvh bg-[#07060c] text-white antialiased`}>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

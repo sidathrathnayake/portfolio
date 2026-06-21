@@ -1,0 +1,14 @@
+{
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "activities": "Activities",
+    "contact": "Contact"
+  },
+  "openMenu": "Open menu",
+  "closeMenu": "Close menu"
+}

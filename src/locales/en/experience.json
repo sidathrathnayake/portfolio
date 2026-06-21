@@ -1,0 +1,57 @@
+{
+  "eyebrow": "Experience",
+  "heading": "My Professional Journey",
+  "viewResume": "View Full Resume",
+  "items": [
+    {
+      "company": "CreatIT Solutions",
+      "position": "Senior Software Engineer",
+      "duration": "June 2024 - Present",
+      "location": "Malabe, Sri Lanka",
+      "description": "Developing and enhancing solutions for Orivet using ReactJS, NextJS, and React Native. Working with Redux, Zustand, AWS Lambda, and modern development practices.",
+      "responsibilities": [
+        "Building modern, high-performing web applications with React and Next.js",
+        "Creating seamless mobile experiences with React Native",
+        "Managing application state with Redux and Zustand",
+        "Implementing serverless functions with AWS Lambda",
+        "Version control with Bitbucket and project management with JIRA"
+      ],
+      "technologies": ["React", "Next.js", "React Native", "AWS Lambda"],
+      "startDate": "2024-06"
+    },
+    {
+      "company": "hSenid Software Lanka",
+      "position": "Software Engineer",
+      "duration": "May 2023 - May 2024",
+      "location": "Kandy, Sri Lanka",
+      "description": "Developed healthcare applications across multiple platforms including native mobile apps for Android/iOS, Flutter apps, and backend services.",
+      "responsibilities": [
+        "Developed native mobile healthcare applications for Android (Java) and iOS (Objective-C, Swift)",
+        "Built healthcare mobile application using Flutter and Dart",
+        "Led backend development of health data collection and analysis systems",
+        "Developed data document conversion web application with Docker deployment",
+        "Implemented GitHub Actions for workflow automation"
+      ],
+      "technologies": ["Flutter", "Java", "Docker", "GitHub Actions"],
+      "startDate": "2023-05",
+      "endDate": "2024-05"
+    },
+    {
+      "company": "Virtusa Pvt. Ltd",
+      "position": "Junior Software Engineer",
+      "duration": "June 2021 - April 2023",
+      "location": "Colombo, Sri Lanka",
+      "description": "Transitioned from 6-month internship to Junior Software Engineer, developing the Virtusa CheckIn mobile application with focus on quality and team collaboration.",
+      "responsibilities": [
+        "Developed mobile applications using Flutter framework",
+        "Managed projects using Azure project management tools",
+        "Version control with GitHub in team environment",
+        "Worked in Agile methodology with iterative development",
+        "Gained expertise in microservice architecture patterns"
+      ],
+      "technologies": ["Flutter", "Azure", "GitHub"],
+      "startDate": "2021-06",
+      "endDate": "2023-04"
+    }
+  ]
+}

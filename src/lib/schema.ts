@@ -1,78 +1,56 @@
-export const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://sidath-portfolio.vercel.app",
-  name: "Sidath Rathnayake",
-  url: "https://sidath-portfolio.vercel.app",
-  email: "sidathirathnayake@gmail.com",
-  telephone: "+94 76 056 6336",
-  jobTitle: "Software Engineer",
-  image: "https://sidath-portfolio.vercel.app/profile.jpg",
-  description:
-    "Full-stack software engineer with 3+ years experience building high-performance web and mobile applications",
-  sameAs: [
-    "https://www.linkedin.com/in/sidath-rathnayake-757a68216",
-    "https://github.com/sidathrathnayake",
-  ],
-  location: {
-    "@type": "Place",
-    name: "Sri Lanka",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "LK",
-    },
-  },
-  worksFor: [
-    {
-      "@type": "Organization",
-      name: "CreatIT Solutions",
-      jobTitle: "Software Engineer",
-      startDate: "2024-06",
-    },
-    {
-      "@type": "Organization",
-      name: "hSenid Software Lanka",
-      jobTitle: "Software Engineer",
-      startDate: "2023-05",
-      endDate: "2024-05",
-    },
-    {
-      "@type": "Organization",
-      name: "Virtusa Pvt. Ltd",
-      jobTitle: "Software Engineer",
-      startDate: "2021-06",
-      endDate: "2023-04",
-    },
-  ],
-  knowsAbout: [
-    "React",
-    "Next.js",
-    "React Native",
-    "Flutter",
-    "Node.js",
-    "Express.js",
-    "Java",
-    "Spring Boot",
-    "MongoDB",
-    "MySQL",
-    "AWS",
-    "Docker",
-    "Three.js",
-  ],
-};
+import { ABOUT_ME, TECHNICAL_SKILLS } from "@/constants/constants";
+import type { ExperienceItem } from "@/types/content";
 
-export const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://sidath-portfolio.vercel.app",
-  name: "Sidath Rathnayake Portfolio",
-  url: "https://sidath-portfolio.vercel.app",
-  description:
-    "Full-stack software engineer portfolio showcasing projects and experience",
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+94-76-0566336",
-    contactType: "Professional",
-    email: "sidathirathnayake@gmail.com",
-  },
-};
+const SITE_URL = "https://sidath-portfolio.vercel.app";
+
+export function buildPersonSchema(
+  experienceItems: ExperienceItem[],
+  personDescription: string
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": SITE_URL,
+    name: "Sidath Rathnayake",
+    url: SITE_URL,
+    email: ABOUT_ME.EMAIL,
+    telephone: ABOUT_ME.PHONE,
+    jobTitle: experienceItems[0].position,
+    image: `${SITE_URL}/assets/badge.png`,
+    description: personDescription,
+    sameAs: [ABOUT_ME.LINKEDIN_URL, ABOUT_ME.GITHUB_URL],
+    location: {
+      "@type": "Place",
+      name: "Sri Lanka",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "LK",
+      },
+    },
+    worksFor: experienceItems.map((item) => ({
+      "@type": "Organization",
+      name: item.company,
+      jobTitle: item.position,
+      startDate: item.startDate,
+      ...(item.endDate ? { endDate: item.endDate } : {}),
+    })),
+    knowsAbout: Object.values(TECHNICAL_SKILLS).flat(),
+  };
+}
+
+export function buildOrganizationSchema(organizationDescription: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": SITE_URL,
+    name: "Sidath Rathnayake Portfolio",
+    url: SITE_URL,
+    description: organizationDescription,
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: ABOUT_ME.PHONE,
+      contactType: "Professional",
+      email: ABOUT_ME.EMAIL,
+    },
+  };
+}

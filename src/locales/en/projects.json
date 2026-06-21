@@ -1,0 +1,62 @@
+{
+  "eyebrow": "Featured Projects",
+  "heading": "Things I've Built",
+  "viewAll": "View All Projects",
+  "showLess": "Show Less",
+  "items": [
+    {
+      "title": "Hotel Management System",
+      "description": "Full-stack web application for SEWWANDI Hotel enabling online room booking, event planning, and management features for employee salaries, inventory, and customer payments.",
+      "technologies": ["Java", "HTML", "JavaScript", "CSS", "MySQL"],
+      "category": "Full-Stack"
+    },
+    {
+      "title": "Online Kids Learning Mobile Application",
+      "description": "Android-based educational mobile app for school children with e-learning platform and online book/newspaper purchasing capabilities.",
+      "technologies": ["Java", "SQLite", "Firebase"],
+      "category": "Mobile"
+    },
+    {
+      "title": "Online Shopping Web Application",
+      "description": "Feature-rich e-commerce web application with RESTful services, payment processing, and order delivery management.",
+      "technologies": ["ReactJS", "HTML", "CSS", "Spring Boot"],
+      "category": "Web"
+    },
+    {
+      "title": "Conference Management System",
+      "description": "Comprehensive full-stack web application for managing online conferences with authorization, registration, payments, and attendee management.",
+      "technologies": ["ReactJS", "NodeJS", "Express", "MongoDB"],
+      "category": "Full-Stack"
+    },
+    {
+      "title": "People's Wave Mobile Application",
+      "description": "Redesigned mobile application with enhanced user interfaces and engaging user experience.",
+      "technologies": ["React Native", "NodeJS", "Express", "MongoDB"],
+      "category": "Mobile"
+    },
+    {
+      "title": "Fuel Station Mobile Application",
+      "description": "Mobile application for managing fuel station operations and customer queue details.",
+      "technologies": ["Java", "SQLite", "C#", "MongoDB"],
+      "category": "Mobile"
+    },
+    {
+      "title": "Mobile Zone Web Application",
+      "description": "Full-stack web application for selling mobile phones and accessories with seamless shopping experience.",
+      "technologies": ["ReactJS", "NodeJS", "Express", "MongoDB"],
+      "category": "Web"
+    },
+    {
+      "title": "ProcMan Web & Mobile Application",
+      "description": "Comprehensive procurement management system for construction sites with web and mobile interfaces.",
+      "technologies": ["ReactJS", "Flutter", "NodeJS", "Express", "MongoDB"],
+      "category": "Full-Stack"
+    },
+    {
+      "title": "Resume Ranker",
+      "description": "4th-year research project focusing on ranking resumes based on technical skills using AI/ML techniques.",
+      "technologies": ["ReactJS", "NodeJS", "Express", "Python", "MongoDB"],
+      "category": "Full-Stack"
+    }
+  ]
+}

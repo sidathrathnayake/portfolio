@@ -1,0 +1,13 @@
+{
+  "greeting": "Hi, I'm Sidath",
+  "headlineLine1": "Senior",
+  "headlineLine2": "Software Engineer",
+  "description": "I build scalable, maintainable and high-performance web and mobile applications with clean code and modern technologies.",
+  "viewWork": "View My Work",
+  "contactMe": "Contact Me",
+  "stats": {
+    "yearsExperience": "Years Experience",
+    "technologies": "Technologies",
+    "companies": "Companies"
+  }
+}

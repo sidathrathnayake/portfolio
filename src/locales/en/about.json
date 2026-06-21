@@ -1,0 +1,31 @@
+{
+  "eyebrow": "About Me",
+  "heading": "Passionate about building digital experiences.",
+  "description": "I'm a software engineer from Sri Lanka who builds scalable web, mobile, and backend applications with a focus on clean architecture, performance, and real-world usability. I enjoy turning complex ideas into simple, maintainable solutions, and I'm constantly refining my skills through modern technologies and hands-on problem solving. My goal is to create digital products that are not only technically strong, but also genuinely useful to the people who rely on them.",
+  "moreAboutMe": "More About Me",
+  "info": {
+    "name": "Name",
+    "email": "Email",
+    "location": "Location",
+    "linkedin": "LinkedIn",
+    "linkedinValue": "View Profile",
+    "availability": "Availability"
+  },
+  "personalSkills": [
+    "Leadership",
+    "Productive Problem Solving",
+    "Innovative Thinking",
+    "Fast Learner",
+    "Self-Learning",
+    "Team Work",
+    "Time Management",
+    "Adaptability",
+    "Positive Attitude",
+    "Patience",
+    "Reliable",
+    "Supportive",
+    "Attention to Detail",
+    "Efficient",
+    "Multitasking"
+  ]
+}
