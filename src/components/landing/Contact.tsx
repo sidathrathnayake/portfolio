@@ -77,7 +77,7 @@ export default function Contact() {
               const content = (
                 <div className="flex items-center gap-4 rounded-xl border border-white/15 bg-white/[0.06] px-5 py-4 backdrop-blur-xl transition-colors hover:border-white/25 mb-4">
                   <row.icon className="h-5 w-5 shrink-0 text-orange-400" />
-                  <span className="text-sm font-medium text-white">
+                  <span className="min-w-0 break-words text-sm font-medium text-white">
                     {row.value}
                   </span>
                 </div>

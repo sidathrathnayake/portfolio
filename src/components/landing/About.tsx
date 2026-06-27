@@ -84,11 +84,11 @@ export default function About() {
               const content = (
                 <>
                   <row.icon className="h-5 w-5 shrink-0 text-purple-400" />
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs uppercase tracking-wide text-neutral-500">
                       {row.label}
                     </p>
-                    <p className="text-sm font-medium text-white">{row.value}</p>
+                    <p className="text-sm font-medium text-white break-words">{row.value}</p>
                   </div>
                 </>
               );
@@ -114,13 +114,13 @@ export default function About() {
 
             <div className="flex items-center gap-4 rounded-xl border border-white/15 bg-white/[0.06] px-5 py-4 backdrop-blur-xl">
               <Clock className="h-5 w-5 shrink-0 text-purple-400" />
-              <div className="flex items-center gap-2">
-                <div>
+              <div className="flex min-w-0 items-center gap-2">
+                <div className="min-w-0">
                   <p className="text-xs uppercase tracking-wide text-neutral-500">
                     {t("info.availability")}
                   </p>
-                  <p className="flex items-center gap-2 text-sm font-medium text-white">
-                    <span className="h-2 w-2 rounded-full bg-green-500" />
+                  <p className="flex items-center gap-2 text-sm font-medium text-white break-words">
+                    <span className="h-2 w-2 shrink-0 rounded-full bg-green-500" />
                     {tCommon("availabilityStatus")}
                   </p>
                 </div>
