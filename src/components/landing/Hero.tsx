@@ -113,7 +113,7 @@ export default function Hero() {
         >
           <div className="relative">
             <Image
-              src="/assets/heroImage.png"
+              src="/assets/heroImage.webp"
               alt="Sidath Rathnayake"
               width={900}
               height={900}
